@@ -17,10 +17,9 @@ class AccelGyro(MycroftSkill):
         while True:
             print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2"%(mpu.acceleration))
             print("Gyro X:%.2f, Y: %.2f, Z: %.2f degrees/s"%(mpu.gyro))
-            print("Temperature: %.2f C"%mpu.temperature)
-            print("")
-            time.sleep(1)
+            self.speak_dialog("Temperature: %.2f C"%(mpu.temperature))
+            print("Temperature: %.2f C"%mpu.temperature))
+            time.sleep(5)
 
 def create_skill():
     return AccelGyro()
-
